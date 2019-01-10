@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Lascinter Woods</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="./parsequerystring.js"></script>
+		<script type="text/javascript" src="./md5.js"></script>
+		<script type="text/javascript" src="./map.js"></script>
+		<script type="text/javascript" src="./atlas.js"></script>
+		<script type="text/javascript" src="./maze.js"></script>
+		<script type="text/javascript" src="./mapRenderer.js"></script>
+		<script type="text/javascript" src="./gameController.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	</head>
+	<body onload="main();">
+		<canvas id="myCanvas" width="640" height="480" style="border:4px solid #008080;"></canvas>
+		<p>Arrow Keys to move. </p>
+		<p>
+			<table>
+				<tr>
+					<td></td>
+					<td><button onclick="gameController.movePlayer(0,-1);">N</button></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><button onclick="gameController.movePlayer(-1,0);">W</button></td>
+					<td></td>
+					<td><button onclick="gameController.movePlayer(1,0);">E</button></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button onclick="gameController.movePlayer(0,1);">S</button></td>
+					<td></td>
+				</tr>
+			</table>
+		</p>
+		<p><button onclick="gameController.initGame();">Restart</button></p>
+	</body>
+</html>
